@@ -110,12 +110,25 @@ header {
   width: 100px;
 }
 
+#nav-icon-container {
+  display: inline;
+}
+
 #hamburger {
   display: block;
+  float: right;
+  margin: 24px 20px 0 0;
+}
+
+#ex-hamburger {
+  display: none;
+  float: right;
+  margin: 8px 20px 0 0;
 }
 
 nav {
   border-radius: 5px 0 0 5px;
+  display: none;
   padding: 10px;
   position: fixed;
   top: 100px;
@@ -149,26 +162,31 @@ a {
   background: #232526;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to left,#232526,#414345);  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to left,#232526,#414345); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  height: 180px;
   margin: 0;
-  padding: 5px 0 10px 24px;
+  padding: 5px 0 0 24px;
 }
 
 h1 {
   margin: 0;
+  width: 50%;
 }
 
 h4 {
   margin-top: 0;
+  width: 50%;
 }
 
 #intro p {
   font-size: 12px;
   margin: 0;
   padding: 0;
+  width: 45%;
 }
 
 #intro img {
   float: right;
+  padding-right: 20px;
   width: 150px;
 }
 
@@ -292,11 +310,96 @@ h4 {
   /* Style adjustments for high resolution devices */
 }
 
-/* Laptops and Desktops */
-@media screen and (min-width: 769px) {
-  #hamburger, #ex-hamburger {
+/* Small Screens */
+@media screen and (min-width: 445px) {
+  h1 { font-size: 32px; width: 50%; }
+  h4 { font-size: 24px; }
+  #intro { height: 240px; }
+  #intro p { font-size: 14px; width: 45%; }
+  #intro img { width: 200px; }
+}
+
+@media screen and (min-width: 600px) {
+  h1 { font-size: 42px; width: 60%; }
+  h4 { font-size: 31.5px; }
+  #intro { height: 301px; }
+  #intro p { font-size: 18px; width: 45%; }
+  #intro img { width: 250px; }
+}
+
+/* Medium Screens */
+@media screen and (min-width: 720px) {
+  h1 { font-size: 60px; width: 60%; }
+  h4 { font-size: 40px; margin-bottom: 20px; }
+  #intro { height: 361px; }
+  #intro p { font-size: 22px; width: 50%; }
+  #intro img { width: 300px; }
+  #nav-icon-container {
     display: none;
   }
+  nav {
+    /* reset to default */
+    background-color: transparent;
+    border: none;
+    border-radius: initial;
+    position: static;
+    /* new */
+    float: right;
+    margin: 20px 0 0 0;
+    padding: 0 20px 0 0;
+    text-align: right;
+    width: 75%;
+  }
+  nav ul {
+    margin-left: 0;
+    padding-left: 0;
+    text-decoration: none;
+  }
+  nav ul li {
+    display: inline;
+    padding: 2px 0;
+    margin: 0 0 0 40px;
+    text-align: right;
+    list-style: none;
+  }
+  a {
+    display: inline;
+    color: white;
+    font-size: 18px;
+    text-align: right;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  h1 { font-size: 72px; width: 60%; }
+  h4 { font-size: 48px; margin-bottom: 20px; }
+  #intro { height: 421px; }
+  #intro p { font-size: 24px; width: 50%; }
+  #intro img { width: 350px; }
+}
+
+@media screen and (min-width: 1024px) {
+  nav { margin-right: 10%; width: 50%; }
+  #logo { margin-left: 10%; }
+  h1 { font-size: 72px; margin-top: 50px; width: 60%; }
+  h4 { font-size: 48px; margin-bottom: 20px; }
+  #intro { height: 481px; padding-left: 10%;}
+  #intro p { font-size: 24px; width: 50%; }
+  #intro img { width: 400px; }
+}
+
+/* Tiny Screens - iPhone 5 for example */
+@media screen and (max-width: 330px) {
+  h1 { font-size: 20px; }
+  h4 { font-size: 15px; }
+  #intro p { font-size: 12px; }
+}
+
+/* Teeny-Tiny Screens - Galaxy Fold */
+@media screen and (max-width: 285px) {
+  #intro { height: 132px; }
+  #intro p { display: none }
+  #intro img { width: 110px; }
 }
 
 /* ==========================================================================

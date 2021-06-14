@@ -88,10 +88,17 @@ textarea {
    ========================================================================== */
 
 body {
+  background: #ECE9E6;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #FFFFFF, #ECE9E6);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #FFFFFF, #ECE9E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   color: white;
   font-family: 'Oswald', sans-serif;
   margin: 0;
   width: 100%;
+}
+
+p, small {
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 /* HEADER */
@@ -107,7 +114,7 @@ header {
 
 #logo {
   margin: 20px;
-  width: 100px;
+  width: 50px;
 }
 
 #nav-icon-container {
@@ -117,13 +124,13 @@ header {
 #hamburger {
   display: block;
   float: right;
-  margin: 24px 20px 0 0;
+  margin: 18px 20px 0 0;
 }
 
 #ex-hamburger {
   display: none;
   float: right;
-  margin: 8px 20px 0 0;
+  margin: 16px 20px 0 0;
 }
 
 nav {
@@ -131,10 +138,11 @@ nav {
   display: none;
   padding: 10px;
   position: fixed;
-  top: 100px;
+  top: 20px;
   right: 0;
   width: 90px;
   background-color: white;
+  opacity: 90%;
   z-index: 99;
 }
 
@@ -157,12 +165,14 @@ a {
   text-decoration: none;
 }
 
+#nav-background { display: none; }
+
 /* INTRODUCTION */
 #intro {
   background: #232526;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to left,#232526,#414345);  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to left,#232526,#414345); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  height: 180px;
+  height: 180.73px;
   margin: 0;
   padding: 5px 0 0 24px;
 }
@@ -177,7 +187,7 @@ h4 {
   width: 50%;
 }
 
-#intro p {
+#intro-job {
   font-size: 12px;
   margin: 0;
   padding: 0;
@@ -198,7 +208,62 @@ h4 {
 
 /* PORTFOLIO */
 #portfolio {
-  background-color: white;
+  color: black;
+  margin: 0 auto;
+  padding-bottom: 50px;
+  width: 90%;
+}
+
+.title {
+  border: none;
+  font-size: 24px;
+  margin: 20px 0;
+}
+
+/* PORTFOLIO GRID */
+.container { width: 100%; }
+.row {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 5px;
+}
+/* TODO: Add margin-bottom: 20px; to .row div when you have more than 4 projects listed */
+.row div { height: 20%; margin-bottom: 5px; }
+.col { width: 20%; }
+.mr-reg { margin-right: 6.5%; }
+.mr-4th { margin-right: 0; }
+
+.folio-thumb { border: 1px solid lightgrey; width: 100%; }
+.folio-feature-thumb {
+  border: 1px solid lightgrey;
+  margin-bottom: 10px;
+  width: 50%;
+}
+.folio-feature-img-r { float: right; margin-left: 20px; }
+.folio-feature-img-l { float: left; margin-right: 20px; }
+.folio-feature-text {
+  font-size: 12px;
+}
+h6 { margin: 20px 0; font-size: 14px; }
+.separator { height: 0; }
+
+/* FOOTER */
+footer {
+  /* background: #232526;  fallback for old browsers */
+  /* background: -webkit-linear-gradient(to left,#232526,#414345);  Chrome 10-25, Safari 5.1-6 */
+  /* background: linear-gradient(to left,#232526,#414345); W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  /* background-color: lightgrey; */
+  background: #ECE9E6;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #FFFFFF, #ECE9E6);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #FFFFFF, #ECE9E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color: black;
+  margin-top: 30px;
+  padding: 7px 0 10px 0;
+  position: fixed;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
 }
 
 /* ==========================================================================
@@ -314,26 +379,27 @@ h4 {
 @media screen and (min-width: 445px) {
   h1 { font-size: 32px; width: 50%; }
   h4 { font-size: 24px; }
-  #intro { height: 240px; }
-  #intro p { font-size: 14px; width: 45%; }
-  #intro img { width: 200px; }
+  #intro { height: 240.97px; }
+  #intro-job { font-size: 14px; width: 45%; }
+  #intro img { width: 200px; padding-top: 0; }
 }
 
 @media screen and (min-width: 600px) {
   h1 { font-size: 42px; width: 60%; }
-  h4 { font-size: 31.5px; }
+  h4 { font-size: 21px; margin-bottom: 20px; }
   #intro { height: 301px; }
-  #intro p { font-size: 18px; width: 45%; }
+  #intro-job { font-size: 14px; width: 45%; }
   #intro img { width: 250px; }
 }
 
 /* Medium Screens */
 @media screen and (min-width: 720px) {
-  h1 { font-size: 60px; width: 60%; }
-  h4 { font-size: 40px; margin-bottom: 20px; }
-  #intro { height: 361px; }
-  #intro p { font-size: 22px; width: 50%; }
-  #intro img { width: 300px; }
+  #logo { margin-left: 5%; width: 60px; }
+  h1 { font-size: 55px; width: 60%; }
+  h4 { font-size: 28px; margin-bottom: 20px; }
+  #intro { height: 361.45px; padding-left: 5%; }
+  #intro-job { font-size: 18px; width: 50%; margin-bottom: 20px; }
+  #intro img { width: 300px; padding-right: 5%; }
   #nav-icon-container {
     display: none;
   }
@@ -342,11 +408,10 @@ h4 {
     background-color: transparent;
     border: none;
     border-radius: initial;
-    position: static;
+    position: fixed;
     /* new */
-    float: right;
-    margin: 20px 0 0 0;
-    padding: 0 20px 0 0;
+    margin: 0;
+    padding: 0 5% 0 0;
     text-align: right;
     width: 75%;
   }
@@ -368,37 +433,62 @@ h4 {
     font-size: 18px;
     text-align: right;
   }
+  #nav-background {
+    background-color: black;
+    opacity: 75%;
+    height: 50px;
+    width: 210px;
+    position: fixed;
+    top: 10px;
+    right: 7.5%;
+
+  }
+  #portfolio { margin: 0 5%; width: auto }
+  /* PORTFOLIO GRID */
+  /* TODO: Add margin-bottom: 5px; to .row div when you have more than 4 projects listed */
+  .row div { height: 10%; }
+  .col { width: 10%; }
+  .mr-reg { margin-right: 2.83%; }
+  .mr-4th { margin-right: 2.83%; }
+  .folio-feature-thumb { width: 40%; }
+  .folio-feature-text { font-size: 18px; }
+  h6 { margin: 20px 0; font-size: 18px; }
+  .separator { height: 40px; }
 }
 
 @media screen and (min-width: 900px) {
-  h1 { font-size: 72px; width: 60%; }
-  h4 { font-size: 48px; margin-bottom: 20px; }
-  #intro { height: 421px; }
-  #intro p { font-size: 24px; width: 50%; }
-  #intro img { width: 350px; }
+  #logo { margin-left: 5%; }
+  nav { width: 60%; }
+  h1 { font-size: 70px; width: 60%; }
+  h4 { font-size: 35px; margin-bottom: 20px; }
+  #intro { height: 421.7px; padding-left: 5%; }
+  #intro-job { font-size: 18px; width: 50%; }
+  #intro img { width: 350px; padding-right: 5%; }
 }
 
 @media screen and (min-width: 1024px) {
-  nav { margin-right: 10%; width: 50%; }
+  nav { padding-right: 10%; width: 55%; }
   #logo { margin-left: 10%; }
-  h1 { font-size: 72px; margin-top: 50px; width: 60%; }
-  h4 { font-size: 48px; margin-bottom: 20px; }
-  #intro { height: 481px; padding-left: 10%;}
-  #intro p { font-size: 24px; width: 50%; }
-  #intro img { width: 400px; }
+  h1 { font-size: 70px; margin-top: 50px; width: 60%; }
+  h4 { font-size: 35px; margin-bottom: 20px; }
+  #intro { height: 481.94px; padding-left: 10%;}
+  #intro-job { font-size: 18px; width: 50%; }
+  #intro img { width: 400px; padding-right: 10%; }
+  #portfolio { margin: 0 10%; }
+  .folio-feature-thumb { width: 35%; }
 }
 
 /* Tiny Screens - iPhone 5 for example */
 @media screen and (max-width: 330px) {
   h1 { font-size: 20px; }
   h4 { font-size: 15px; }
-  #intro p { font-size: 12px; }
+  #intro-job { font-size: 12px; }
 }
 
 /* Teeny-Tiny Screens - Galaxy Fold */
 @media screen and (max-width: 285px) {
-  #intro { height: 132px; }
-  #intro p { display: none }
+  #intro { height: 132.53px; }
+  #intro-job { display: none }
   #intro img { width: 110px; }
 }
 

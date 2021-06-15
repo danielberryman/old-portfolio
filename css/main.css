@@ -123,14 +123,18 @@ header {
 
 #hamburger {
   display: block;
-  float: right;
   margin: 18px 20px 0 0;
+  position: fixed;
+  top: 0;
+  right: 0;
 }
 
 #ex-hamburger {
   display: none;
-  float: right;
   margin: 16px 20px 0 0;
+  position: fixed;
+  top: 0;
+  right: 0;
 }
 
 nav {
@@ -138,7 +142,7 @@ nav {
   display: none;
   padding: 10px;
   position: fixed;
-  top: 20px;
+  top: 40px;
   right: 0;
   width: 90px;
   background-color: white;
@@ -210,7 +214,6 @@ h4 {
 #portfolio {
   color: black;
   margin: 0 auto;
-  padding-bottom: 50px;
   width: 90%;
 }
 
@@ -250,17 +253,12 @@ h6 { margin: 20px 0; font-size: 14px; }
 
 /* FOOTER */
 footer {
-  /* background: #232526;  fallback for old browsers */
-  /* background: -webkit-linear-gradient(to left,#232526,#414345);  Chrome 10-25, Safari 5.1-6 */
-  /* background: linear-gradient(to left,#232526,#414345); W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  /* background-color: lightgrey; */
   background: #ECE9E6;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #FFFFFF, #ECE9E6);  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, #FFFFFF, #ECE9E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   color: black;
   margin-top: 30px;
   padding: 7px 0 10px 0;
-  position: fixed;
   bottom: 0;
   text-align: center;
   width: 100%;
@@ -410,29 +408,25 @@ footer {
     border-radius: initial;
     position: fixed;
     /* new */
+    top: 7px;
     margin: 0;
-    padding: 0 5% 0 0;
-    text-align: right;
-    width: 75%;
+    padding: 0 2% 0 0;
+    width: 100%;
   }
   nav ul {
-    margin-left: 0;
-    padding-left: 0;
-    text-decoration: none;
+    float: right;
   }
   nav ul li {
-    display: inline;
-    padding: 2px 0;
-    margin: 0 0 0 40px;
-    text-align: right;
-    list-style: none;
+    display: inline-block;
+    background: rgba(0, 0, 0, .8);
+    padding: 5px 30px;
+    /* margin: 0; */
   }
-  a {
-    display: inline;
+  nav ul a {
     color: white;
     font-size: 18px;
-    text-align: right;
   }
+  nav ul li:hover { background: grey; }
   #nav-background {
     background-color: black;
     opacity: 75%;
@@ -453,6 +447,7 @@ footer {
   .folio-feature-thumb { width: 40%; }
   .folio-feature-text { font-size: 18px; }
   h6 { margin: 20px 0; font-size: 18px; }
+  h6 a:hover { color: grey; }
   .separator { height: 40px; }
 }
 
@@ -467,7 +462,8 @@ footer {
 }
 
 @media screen and (min-width: 1024px) {
-  nav { padding-right: 10%; width: 55%; }
+  nav { padding: 0 8% 0 0; width: 55%; }
+
   #logo { margin-left: 10%; }
   h1 { font-size: 70px; margin-top: 50px; width: 60%; }
   h4 { font-size: 35px; margin-bottom: 20px; }

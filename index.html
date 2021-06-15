@@ -5,16 +5,11 @@
   <meta charset="utf-8">
   <title>Daniel Berryman - Full Stack Developer Portfolio</title>
   <!-- <meta name="description" content=""> -->
-  <!-- TODO: create note card on this: the following enables media queries to work on chrome dev tools  -->
+  <!-- The following enables media queries to work on chrome dev tools  -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- <meta property="og:title" content="">
-  <meta property="og:type" content="">
-  <meta property="og:url" content="">
-  <meta property="og:image" content=""> -->
-
-  <!-- <link rel="manifest" href="site.webmanifest">
-  <link rel="apple-touch-icon" href="icon.png"> -->
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
   <!-- Place favicon.ico in the root directory -->
 
   <!-- <link rel="stylesheet" href="css/normalize.css"> -->
@@ -22,8 +17,6 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
-
-  <!-- <meta name="theme-color" content="#fafafa"> -->
 </head>
 
 <body>
@@ -35,15 +28,10 @@
     </div>
     <nav>
       <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#portfolio">Portfolio</a></li>
-        <!-- <li><a href="">Resume</a></li>
-        <li><a href="">Contact</a></li>
-        <li><a href="">Learn</a></li>
-        <li><a href="">About</a></li> -->
+        <a href="#"><li>Home</li></a>
+        <a href="#portfolio"><li>Portfolio</li></a>
       </ul>
     </nav>
-    <div id="nav-background"></div>
   </header>
   <!-- Introduction -->
   <section id="intro" style="border: none;">
@@ -51,7 +39,7 @@
     <h1>Daniel Berryman</h1>
     <h4>Full-Stack Developer</h4>
     <p id="intro-job">
-      Hi, I'm Daniel. I'm looking to grow and contribute to meaningful projects that help make the world better.
+      Hi, I'm Daniel. I'm looking to learn/grow and contribute to meaningful projects that help make the world better.
     </p>
   </section>
   <div style="clear:both;"></div>
@@ -59,32 +47,48 @@
     <h5 class="title">Portfolio</h5>
     <div class="container">
       <div class="row">
-        <div class="col mr-reg"><img class="folio-thumb" src="img/js-dates-preview.png" alt="JavaScript Dates App"></div>
-        <div class="col mr-reg"><img class="folio-thumb" src="img/beltbook-preview-image.png" alt="JavaScript Dates App"></div>
+        <div class="col mr-reg">
+          <a href="#jsdates">
+            <img class="folio-thumb" src="img/js-dates-preview.png" alt="JavaScript Dates App">
+          </a>
+        </div>
+        <div class="col mr-reg">
+          <a href="#beltbook">
+            <img class="folio-thumb" src="img/beltbook-preview-image.png" alt="The Beltbook App">
+          </a>
+        </div>
       </div>
     </div>
     <hr>
-    <article>
+    <article id="jsdates">
       <img class="folio-feature-thumb folio-feature-img-r" src="img/javascript-practice-app-main.png" alt="JavaScript Practice App Preview">
       <h6>JavaScript Practice App</h6>
       <p class="folio-feature-text">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis earum tempore sint assumenda numquam sapiente in, cum soluta blanditiis mollitia quasi cumque! Ea pariatur sint debitis odio eius reprehenderit maxime.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem velit sunt perferendis ea aut delectus atque fugiat rem sapiente, repudiandae quisquam ab alias, doloremque quibusdam, consectetur dolor corrupti nesciunt dolorum!
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, illo? Sequi fugiat, consequatur qui praesentium dolore, quasi recusandae optio omnis error, dolores aut consequuntur quia! Dolor rerum eligendi et minima.
+        I wrote this app as a way to create a tool for myself to practice working with JavaScript date constructors. The app generates a small
+        snippet of JavaScript and places it in a psuedo code editor. You can answer the questions by coding in the correct answer and then submitting your response.
+        Currently, the questions revolve exclusively around what values will be returned when local methods versus utc methods are called on Date object
+        that's generated. I wrote it in vanilla JS to practice fundamentals. I'd like to write a more full-fleged app in a framework
+        that would give me and others a way to practice JavaScript fundamentals that feels like you're coding instead of only creating and then practicing
+        static flashcards.
       </p>
     </article>
     <div class="separator"></div>
-    <article>
+    <article id="beltbook">
       <img class="folio-feature-thumb folio-feature-img-l" src="img/beltbook-app-main.png" alt="The Beltbook App">
-      <h6>thebeltbook.com</h6>
+      <h6>
+        <a href="https://thebeltbook.com" target="_blank">thebeltbook.com</a>
+      </h6>
       <p class="folio-feature-text">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis earum tempore sint assumenda numquam sapiente in, cum soluta blanditiis mollitia quasi cumque! Ea pariatur sint debitis odio eius reprehenderit maxime.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem velit sunt perferendis ea aut delectus atque fugiat rem sapiente, repudiandae quisquam ab alias, doloremque quibusdam, consectetur dolor corrupti nesciunt dolorum!
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, illo? Sequi fugiat, consequatur qui praesentium dolore, quasi recusandae optio omnis error, dolores aut consequuntur quia! Dolor rerum eligendi et minima.
+        The beltbook is a awesome web app to help Musical Theatre performs manage their repertoire. I connected to the project through
+        a voice teacher that I had when I was growing up. It's written in React and Python/Django with a MySQL database.
+        I didn't write the app itself. I was approached by the owner after the developer who wrote most of it was no longer available
+        to work on the project. I was tasked with getting it to production. I provisioned a Digital Ocean droplet running Ubuntu
+        and I've deployed the app using Caddy and Gunicorn. Alongside deployment I've connected the app to use a 3rd-party email provider,
+        implemented cache busting, and configured the DNS setup.
       </p>
     </article>
-    <div class="separator"></div>
   </section>
+  <div style="clear:both;"></div>
   <footer>
     <small>&copy; Copyright 2021, Daniel Berryman</small>
   </footer>
@@ -96,7 +100,7 @@
   <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
   <script>
     window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
-    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
+    ga('create', '275834795', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
   </script>
   <script src="https://www.google-analytics.com/analytics.js" async></script>
 </body>

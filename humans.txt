@@ -3,11 +3,13 @@
 
 # TEAM
 
-    <name> -- <role> -- <twitter>
+    Daniel Berryman - Creator
 
 # THANKS
 
-    <name>
+    I want to thank my incredible wife for leaving me with our 2 children for 3 days.
+    Her trip gave 3 nights alone in front of my computer to create this portfolio site.
+    And I want thank my children for sleeping so that I could maintain focus.
 
 # TECHNOLOGY COLOPHON
 

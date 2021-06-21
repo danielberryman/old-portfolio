@@ -35,12 +35,14 @@
   </header>
   <!-- Introduction -->
   <section id="intro" style="border: none;">
+    <div class="intro-text-content">
+      <h1>Daniel Berryman</h1>
+      <h4>Full-Stack Developer</h4>
+      <p id="intro-job" style="display: inline-block">
+        Hi! I'm Daniel. I'm looking to learn/grow and contribute to meaningful projects that help make the world better.
+      </p>
+    </div>
     <img id="headshot" src="img/headshot-small.png" alt="headshot">
-    <h1>Daniel Berryman</h1>
-    <h4>Full-Stack Developer</h4>
-    <p id="intro-job">
-      Hi, I'm Daniel. I'm looking to learn/grow and contribute to meaningful projects that help make the world better.
-    </p>
   </section>
   <div style="clear:both;"></div>
   <section id="portfolio">
@@ -60,32 +62,50 @@
       </div>
     </div>
     <hr>
-    <article id="jsdates">
-      <img class="folio-feature-thumb folio-feature-img-r" src="img/javascript-practice-app-main.png" alt="JavaScript Practice App Preview">
-      <h6>JavaScript Practice App</h6>
-      <p class="folio-feature-text">
-        I wrote this app as a way to create a tool for myself to practice working with JavaScript date constructors. The app generates a small
-        snippet of JavaScript and places it in a psuedo code editor. You can answer the questions by coding in the correct answer and then submitting your response.
-        Currently, the questions revolve exclusively around what values will be returned when local methods versus utc methods are called on Date object
-        that's generated. I wrote it in vanilla JS to practice fundamentals. I'd like to write a more full-fleged app in a framework
-        that would give me and others a way to practice JavaScript fundamentals that feels like you're coding instead of only creating and then practicing
-        static flashcards.
-      </p>
+    <article id="jsdates" class="container">
+      <h6>
+        <a href="https://danielberryman.github.io/jsdates/" target="_blank">JavaScript Practice App</a>
+      </h6>
+      <div class="row">
+        <div class="folio-img-col"> <!--  col-35 pr-5p -->
+          <a href="https://danielberryman.github.io/jsdates/" target="_blank">
+            <img class="folio-feature-thumb" src="img/javascript-practice-app-main.png" alt="JavaScript Practice App Preview">
+          </a>
+        </div>
+        <div>
+          <p class="folio-feature-text">
+            I wrote this app as a way to create a tool for myself to practice working with JavaScript date constructors. The app generates a small
+            snippet of JavaScript and places it in a psuedo code editor. You can answer the questions by coding in the correct answer and then submitting your response.
+            Currently, the questions revolve exclusively around what values will be returned when local methods versus utc methods are called on Date object
+            that's generated. I wrote it in vanilla JS to practice fundamentals. I'd like to write a more full-fleged app in a framework
+            that would give me and others a way to practice JavaScript fundamentals that feels like you're coding instead of only creating and then practicing
+            static flashcards.
+          </p>
+        </div>
+      </div>
     </article>
     <div class="separator"></div>
     <article id="beltbook">
-      <img class="folio-feature-thumb folio-feature-img-l" src="img/beltbook-app-main.png" alt="The Beltbook App">
       <h6>
         <a href="https://thebeltbook.com" target="_blank">thebeltbook.com</a>
       </h6>
-      <p class="folio-feature-text">
-        The beltbook is a awesome web app to help Musical Theatre performs manage their repertoire. I connected to the project through
-        a voice teacher that I had when I was growing up. It's written in React and Python/Django with a MySQL database.
-        I didn't write the app itself. I was approached by the owner after the developer who wrote most of it was no longer available
-        to work on the project. I was tasked with getting it to production. I provisioned a Digital Ocean droplet running Ubuntu
-        and I've deployed the app using Caddy and Gunicorn. Alongside deployment I've connected the app to use a 3rd-party email provider,
-        implemented cache busting, and configured the DNS setup.
-      </p>
+      <div class="row">
+        <div class="folio-img-col"> <!--  col-35 pr-5p -->
+          <a href="https://thebeltbook.com" target="_blank">
+            <img class="folio-feature-thumb" src="img/beltbook-app-main.png" alt="The Beltbook App">
+          </a>
+        </div>
+        <div>
+          <p class="folio-feature-text">
+            The beltbook is a awesome web app to help Musical Theatre performs manage their repertoire. I connected to the project through
+            a voice teacher that I had when I was growing up. It's written in React and Python/Django with a MySQL database.
+            I didn't write the app itself. I was approached by the owner after the developer who wrote most of it was no longer available
+            to work on the project. I was tasked with getting it to production. I provisioned a Digital Ocean droplet running Ubuntu
+            and I've deployed the app using Caddy and Gunicorn. Alongside deployment I've connected the app to use a 3rd-party email provider,
+            implemented cache busting, and configured the DNS setup.
+          </p>
+        </div>
+      </div>
     </article>
   </section>
   <div style="clear:both;"></div>

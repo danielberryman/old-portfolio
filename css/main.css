@@ -123,7 +123,7 @@ header {
 
 #hamburger {
   display: block;
-  margin: 18px 20px 0 0;
+  margin: 22px 20px 0 0;
   position: fixed;
   top: 0;
   right: 0;
@@ -131,7 +131,7 @@ header {
 
 #ex-hamburger {
   display: none;
-  margin: 16px 20px 0 0;
+  margin: 20px 22px 0 0;
   position: fixed;
   top: 0;
   right: 0;
@@ -158,6 +158,7 @@ nav ul {
 }
 
 nav ul li {
+  font-size: 18px;
   padding: 2px 0;
   margin-right: 20px;
   text-align: right;
@@ -176,38 +177,35 @@ a {
   background: #232526;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to left,#232526,#414345);  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to left,#232526,#414345); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  height: 180.73px;
+  /* height: 180.73px; */
   margin: 0;
-  padding: 5px 0 0 24px;
+  padding: 5px 24px 0 24px;
 }
 
 h1 {
+  display: block;
+  text-align: center;
+  font-size: 48px;
   margin: 0;
-  width: 50%;
 }
 
 h4 {
-  margin-top: 0;
-  width: 50%;
+  display: block;
+  text-align: center;
+  font-size: 28px;
+  margin: 0;
 }
 
 #intro-job {
-  font-size: 12px;
-  margin: 0;
+  font-size: 18px;
+  margin: 35px auto;
   padding: 0;
-  width: 45%;
+  text-align: center;
+  width: 100%;
 }
 
 #intro img {
-  float: right;
-  padding-right: 20px;
-  width: 150px;
-}
-
-#intro ul {
-  font-size: 12px;
-  margin: 2px;
-  list-style: square;
+  width: 100%;
 }
 
 /* PORTFOLIO */
@@ -234,21 +232,20 @@ h4 {
 /* TODO: Add margin-bottom: 20px; to .row div when you have more than 4 projects listed */
 .row div { height: 20%; margin-bottom: 5px; }
 .col { width: 20%; }
+.col-60 { width: 60% }
+.col-35 { width: 35% }
+.pr-5p { padding-right: 5%; }
 .mr-reg { margin-right: 6.5%; }
 .mr-4th { margin-right: 0; }
 
 .folio-thumb { border: 1px solid lightgrey; width: 100%; }
 .folio-feature-thumb {
   border: 1px solid lightgrey;
-  margin-bottom: 10px;
-  width: 50%;
+  width: 100%;
 }
-.folio-feature-img-r { float: right; margin-left: 20px; }
-.folio-feature-img-l { float: left; margin-right: 20px; }
-.folio-feature-text {
-  font-size: 12px;
-}
-h6 { margin: 20px 0; font-size: 14px; }
+.folio-feature-text { margin: 10px 0 20px 0; }
+.folio-img-col { width: 100%; }
+h6 { margin: 0 0 20px 0; font-size: 24px; }
 .separator { height: 0; }
 
 /* FOOTER */
@@ -375,29 +372,29 @@ footer {
 
 /* Small Screens */
 @media screen and (min-width: 445px) {
-  h1 { font-size: 32px; width: 50%; }
-  h4 { font-size: 24px; }
-  #intro { height: 240.97px; }
-  #intro-job { font-size: 14px; width: 45%; }
-  #intro img { width: 200px; padding-top: 0; }
+  .intro-text-content {
+    float: left;
+    width: 55%;
+  }
+  h1 { font-size: 32px; text-align: left; }
+  h4 { font-size: 24px; text-align: left; }
+  #intro { display: block; }
+  #intro-job { font-size: 14px; margin: 20px 0; text-align: left; }
+  #intro img { width: 40%; padding: 0 0 0 5%; }
 }
 
 @media screen and (min-width: 600px) {
-  h1 { font-size: 42px; width: 60%; }
-  h4 { font-size: 21px; margin-bottom: 20px; }
-  #intro { height: 301px; }
-  #intro-job { font-size: 14px; width: 45%; }
-  #intro img { width: 250px; }
+  h1 { font-size: 42px; }
+  h4 { font-size: 21px; margin-bottom: 10px; }
 }
 
 /* Medium Screens */
 @media screen and (min-width: 720px) {
-  #logo { margin-left: 5%; width: 60px; }
-  h1 { font-size: 55px; width: 60%; }
-  h4 { font-size: 28px; margin-bottom: 20px; }
-  #intro { height: 361.45px; padding-left: 5%; }
-  #intro-job { font-size: 18px; width: 50%; margin-bottom: 20px; }
-  #intro img { width: 300px; padding-right: 5%; }
+  #logo { margin-left: 4.5%; width: 60px; }
+  h1 { font-size: 55px; }
+  h4 { font-size: 28px; margin-bottom: 15px; }
+  #intro { padding-left: 5%; }
+  #intro-job { font-size: 18px; margin-bottom: 20px; }
   #nav-icon-container {
     display: none;
   }
@@ -410,8 +407,8 @@ footer {
     /* new */
     top: 7px;
     margin: 0;
-    padding: 0 2% 0 0;
-    width: 100%;
+    padding: 0 1% 0 0;
+    width: 50%;
   }
   nav ul {
     float: right;
@@ -420,7 +417,6 @@ footer {
     display: inline-block;
     background: rgba(0, 0, 0, .8);
     padding: 5px 30px;
-    /* margin: 0; */
   }
   nav ul a {
     color: white;
@@ -444,34 +440,29 @@ footer {
   .col { width: 10%; }
   .mr-reg { margin-right: 2.83%; }
   .mr-4th { margin-right: 2.83%; }
-  .folio-feature-thumb { width: 40%; }
-  .folio-feature-text { font-size: 18px; }
-  h6 { margin: 20px 0; font-size: 18px; }
+  .folio-feature-thumb { width: 35%; }
+  .folio-feature-text { font-size: 18px; margin-bottom: 0; }
+  h6 { font-size: 24px; }
   h6 a:hover { color: grey; }
-  .separator { height: 40px; }
+  .separator { height: 20px; }
 }
 
 @media screen and (min-width: 900px) {
-  #logo { margin-left: 5%; }
   nav { width: 60%; }
-  h1 { font-size: 70px; width: 60%; }
+  h1 { font-size: 70px; }
   h4 { font-size: 35px; margin-bottom: 20px; }
-  #intro { height: 421.7px; padding-left: 5%; }
-  #intro-job { font-size: 18px; width: 50%; }
-  #intro img { width: 350px; padding-right: 5%; }
+  #intro-job { font-size: 18px; }
 }
 
 @media screen and (min-width: 1024px) {
   nav { padding: 0 8% 0 0; width: 55%; }
 
-  #logo { margin-left: 10%; }
-  h1 { font-size: 70px; margin-top: 50px; width: 60%; }
+  #logo { margin-left: 9.6%; }
+  h1 { font-size: 70px; margin-top: 50px; }
   h4 { font-size: 35px; margin-bottom: 20px; }
-  #intro { height: 481.94px; padding-left: 10%;}
-  #intro-job { font-size: 18px; width: 50%; }
-  #intro img { width: 400px; padding-right: 10%; }
+  #intro { padding: 0 10%;}
+  #intro-job { font-size: 18px; }
   #portfolio { margin: 0 10%; }
-  .folio-feature-thumb { width: 35%; }
 }
 
 /* Tiny Screens - iPhone 5 for example */
